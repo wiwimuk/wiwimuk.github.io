@@ -2,30 +2,17 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Calendar } from "lucide-react";
 import { Link } from "wouter";
+import type { Note } from "@/types/content";
 
 interface NoteCardProps {
-  id: number;
-  title: string;
-  excerpt: string;
-  category: string;
-  tags: string[];
-  date: string;
-  readTime: string;
-  imageUrl?: string;
+  note: Note;
 }
 
-export default function NoteCard({
-  id,
-  title,
-  excerpt,
-  category,
-  tags,
-  date,
-  readTime,
-  imageUrl,
-}: NoteCardProps) {
+export default function NoteCard({ note }: NoteCardProps) {
+  const { id, slug, title, excerpt, category, tags, date, readTime, imageUrl } = note;
+  
   return (
-    <Link href={`/note/${id}`}>
+    <Link href={`/note/${slug}`}>
       <Card className="hover-elevate cursor-pointer h-full flex flex-col" data-testid={`card-note-${id}`}>
         {imageUrl && (
           <div className="w-full aspect-video overflow-hidden rounded-t-lg">
