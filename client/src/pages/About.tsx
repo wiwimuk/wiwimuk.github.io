@@ -2,7 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profileImage from '@assets/generated_images/Student_profile_photo_16a8b43f.png';
+
+const profileImage = "/attached_assets/generated_images/Student_profile_photo_16a8b43f.png";
 
 export default function About() {
   return (
