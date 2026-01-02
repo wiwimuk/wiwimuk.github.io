@@ -16,7 +16,7 @@ export default function About() {
               <AvatarFallback>學生</AvatarFallback>
             </Avatar>
             <div className="space-y-2">
-              <h1 className="text-4xl font-bold" data-testid="text-name">陳小華</h1>
+              <h1 className="text-4xl font-bold" data-testid="text-name">wiwi</h1>
               <p className="text-xl text-muted-foreground">資訊工程系學生</p>
             </div>
           </div>
